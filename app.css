@@ -1,0 +1,146 @@
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.App {
+  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #FFD56B;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #333;
+  position: relative;
+  padding-top: 20px;
+  overflow-y: auto; 
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.toggle-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.toggle-label {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+input[type="text"] {
+  height: 20px;
+  padding: 5px 20px;
+  color: #333;
+}
+
+button {
+  margin-top: 10px;
+  padding: 3px 18px;
+  color: #333;
+  font-size: 16px;
+  background-color: #FFB26B;
+  transition: .3s;
+  border: none;
+  letter-spacing: 2px;
+  align-self: flex-end;
+}
+
+button:hover {
+  color: #FF7B54;
+  background-color: #333;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  flex-grow: 1;
+}
+
+li {
+  padding: 5px 20px;
+  width: 350px;
+  background-color: #939B62;
+  list-style-type: none;
+  text-align: start;
+  border-bottom: 2px solid #FF7B54;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: .7px;
+}
+
+li button {
+  letter-spacing: 2px;
+  padding: 3px 18px;
+  color: #333;
+  font-size: 16px;
+  background-color: #FFB26B;
+  transition: .3s;
+  border: none;
+}
+
+li button:hover {
+  color: #FF7B54;
+  background-color: #333;
+}
+
+li:last-child {
+  margin-bottom: auto;
+}
